@@ -1,15 +1,15 @@
-version: '3.8'
+version: '1.0'
 services:
   db:
     image: mysql:latest
-    container_name: apple-nest-api
+    container_name: nest-api
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: apple-nest-api
+      MYSQL_DATABASE: board_project
       MYSQL_USER: user
       MYSQL_PASSWORD: password
     ports:
-      - "3307:3306"
+      - '3308:3306'
     volumes:
       - db_data:/var/lib/mysql
 
