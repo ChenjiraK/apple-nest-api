@@ -1,0 +1,12 @@
+{
+   "firstname": "test",
+   "lastname": "test",
+   "birthdate": "29-07-1995",
+   "gender": "female",
+   "phone": "0987654321",
+   "email": "test@email.com",
+   "password": "12345678",
+   "is_accept_privacy": true,
+   "is_accept_terms": true,
+   "is_accept_marketing": true
+}
