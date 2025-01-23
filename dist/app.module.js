@@ -10,8 +10,16 @@ exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
 const config_1 = require("@nestjs/config");
 const typeorm_1 = require("@nestjs/typeorm");
-const profile_module_1 = require("./profile/profile.module");
 const profile_entity_1 = require("./profile/profile.entity");
+const model_entity_1 = require("./model/model.entity");
+const color_entity_1 = require("./color/color.entity");
+const capacity_entity_1 = require("./capacity/capacity.entity");
+const dashboard_entity_1 = require("./dashboard/dashboard.entity");
+const profile_module_1 = require("./profile/profile.module");
+const color_module_1 = require("./color/color.module");
+const model_module_1 = require("./model/model.module");
+const capacity_module_1 = require("./capacity/capacity.module");
+const dashboard_module_1 = require("./dashboard/dashboard.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -26,10 +34,20 @@ exports.AppModule = AppModule = __decorate([
                 username: process.env.DB_USER,
                 password: process.env.DB_PASSWORD,
                 database: process.env.DB_NAME,
-                entities: [profile_entity_1.Profile],
+                entities: [
+                    profile_entity_1.Profile,
+                    model_entity_1.ModelEntity,
+                    color_entity_1.ColorEntity,
+                    capacity_entity_1.CapacityEntity,
+                    dashboard_entity_1.Dashboard
+                ],
                 synchronize: true,
             }),
             profile_module_1.ProfileModule,
+            color_module_1.ColorModule,
+            model_module_1.ModelModule,
+            capacity_module_1.CapacityModule,
+            dashboard_module_1.DashboardModule,
         ],
     })
 ], AppModule);
